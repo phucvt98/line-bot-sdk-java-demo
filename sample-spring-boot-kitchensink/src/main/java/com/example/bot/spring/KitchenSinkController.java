@@ -205,6 +205,7 @@ public class KitchenSinkController {
 
     @EventMapping
     public void handleFollowEvent(FollowEvent event) {
+		log.info("followed this bot: {}", event);
         String replyToken = event.getReplyToken();
         this.replyText(replyToken, "Got followed event");
     }
